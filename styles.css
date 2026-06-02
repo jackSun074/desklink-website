@@ -311,149 +311,27 @@ body {
   border: 1px solid var(--border);
   border-top: none;
   border-radius: 0 0 var(--radius-xl) var(--radius-xl);
-  padding: 32px;
+  padding: 20px;
 }
 
-.app-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr 2fr;
-  gap: 24px;
+.app-shot-frame {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.06) 0%, rgba(37, 99, 235, 0.02) 100%);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
 }
 
-@media (max-width: 768px) {
-  .app-layout {
-    grid-template-columns: 1fr;
+.app-shot-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .app-shot-frame {
+    box-shadow: 0 24px 60px rgba(2, 6, 23, 0.45);
   }
-}
-
-/* App Sidebar Mock */
-.app-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.sidebar-item {
-  height: 32px;
-  background: var(--card-bg);
-  border-radius: 8px;
-  border: 1px solid var(--border);
-}
-
-.sidebar-item.active {
-  background: rgba(37, 99, 235, 0.2);
-  border-color: var(--primary);
-}
-
-.sidebar-divider {
-  height: 1px;
-  background: var(--border);
-  margin: 8px 0;
-}
-
-/* App List Mock */
-.app-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.list-search {
-  height: 40px;
-  background: var(--card-bg);
-  border-radius: 8px;
-  border: 1px solid var(--border);
-}
-
-.list-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.stat-card {
-  height: 64px;
-  background: rgba(37, 99, 235, 0.1);
-  border-radius: 8px;
-  border: 1px solid rgba(37, 99, 235, 0.2);
-}
-
-.list-item {
-  height: 80px;
-  background: var(--card-bg);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  padding: 12px;
-}
-
-/* App Detail Mock */
-.app-detail {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.detail-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.detail-title {
-  height: 32px;
-  width: 40%;
-  background: var(--card-bg);
-  border-radius: 8px;
-}
-
-.detail-actions {
-  display: flex;
-  gap: 8px;
-}
-
-.action-btn {
-  height: 32px;
-  width: 64px;
-  background: var(--card-bg);
-  border-radius: 8px;
-  border: 1px solid var(--border);
-}
-
-.action-btn.primary {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-  border: none;
-}
-
-.detail-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-
-@media (max-width: 768px) {
-  .detail-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.info-card {
-  height: 80px;
-  background: var(--card-bg);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-}
-
-.detail-panels {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.panel {
-  height: 160px;
-  background: var(--card-bg);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
 }
 
 /* Features Section */
